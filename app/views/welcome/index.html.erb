@@ -1,0 +1,1543 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <title>AUCS</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <script>
+        (function() {
+          var cx = '012902697259595331312:izyfjlodcqu';
+          var gcse = document.createElement('script');
+          gcse.type = 'text/javascript';
+          gcse.async = true;
+          gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+          //gcse.src = "f.txt";
+          var s = document.getElementsByTagName('script')[0];
+          s.parentNode.insertBefore(gcse, s);
+        })();
+      </script>
+
+  </head>
+  <body>
+
+  <div class="container-fluid">
+        <div id="gsearch" style="float:right;width:400px;height:30px; margin-top: 20px;" >
+          <gcse:search></gcse:search>
+        </div>
+        <div style="float: left;margin-top: 5px;height: 10px;width: 10px">
+          <img src="hi2.png" alt="Mountain View">
+        </div>
+        <br>
+        <br>
+        <div id="wrapper"  align="center">
+    
+
+  <br>
+  <br>
+
+          <h3 style="margin-left: 10px;" id="homeHeading">Enter URLs of universities</h3>
+          <div id="hideuni" style="display: inline-block; text-align: center;" >
+
+            <br>
+            
+            <div style="margin-left: 10px; display: none">
+              <input type="radio" name="urltype" value="home" checked> Home URL &nbsp;&nbsp;&nbsp;&nbsp;
+              <input type="radio" name="urltype" value="department"> Department URL <br>
+            </div>
+            <br>
+            <table class="table table-striped" id="url-table" border="2px" align="center" width="80%" cellpadding="10px"></table>
+            <div class="input-group" style="margin-bottom:10px;width:80%;margin-left:10px;height:30px">
+              <input id="urlBar" type="url" class="form-control" type="text" placeholder="Enter URL" style="height:45px;margin-top:5px;border-radius:5px">
+              <span class="input-group-btn" style="height:45px;margin-top:5px;border-radius:5px">
+                <button id="check1" class="btn-lg btn btn-primary" style="border-radius:5px; cursor:pointer;" type="button" 
+                onclick="addUrlFunc()">Add</button>
+              </span>
+              <br>
+            </div>
+          </br>
+        </div>
+
+
+        <div class="criteria section" >
+          <div id="hidecriteria" style="display: none;" >
+            <table class="table table-striped" style="width:80% " id="criteria-table" border="2px" align="center" cellpadding="10px">
+              <tr>
+                <th style="padding-left:5px">Criteria Name</th>
+                <th style="padding-left:5px">Selection Status</th>
+                <th style="padding-left:5px">Weightage</th>
+              </tr>
+              <tr>
+                <td style="padding-left:5px">Total Faculty</td>
+                <td><input type="checkbox" class="checkbox" id="cb1" name="checkbox1" style="margin-left:5px;cursor: pointer;" /> </td>
+                <td>
+                  <select id="s1" style="margin-left:5px;cursor: pointer;">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td style="padding-left:5px">Total PHD's</td>
+                <td><input type="checkbox" class="checkbox" id="cb2" name="checkbox2" style="margin-left:5px;cursor: pointer;" /></td>
+                <td>
+                  <select id="s2" style="margin-left:5px;cursor: pointer;">
+                   <option value="1">1</option>
+                   <option value="2">2</option>
+                   <option value="3">3</option>
+                   <option value="4">4</option>
+                   <option value="5">5</option>
+                   <option value="6">6</option>
+                   <option value="7">7</option>
+                   <option value="8">8</option>
+                   <option value="9">9</option>
+                   <option value="10">10</option>
+                 </select>
+               </td>
+             </tr>
+             <tr>
+              <td style="padding-left:5px">Foreign Phd's</td>
+              <td><input type="checkbox" class="checkbox" id="cb3" name="checkbox3" style="margin-left:5px;cursor: pointer;" /></td>
+              <td>
+                <select id="s3" style="margin-left:5px;cursor: pointer;">
+                 <option value="1">1</option>
+                 <option value="2">2</option>
+                 <option value="3">3</option>
+                 <option value="4">4</option>
+                 <option value="5">5</option>
+                 <option value="6">6</option>
+                 <option value="7">7</option>
+                 <option value="8">8</option>
+                 <option value="9">9</option>
+                 <option value="10">10</option>
+               </select>
+             </td>
+           </tr>
+           <tr>
+            <td style="padding-left:5px">Research Groups</td>
+            <td><input type="checkbox" class="checkbox" id="cb4" name="checkbox4" style="margin-left:5px;cursor: pointer;" /></td>
+            <td>
+              <select id="s4" style="margin-left:5px;cursor: pointer;">
+               <option value="1">1</option>
+               <option value="2">2</option>
+               <option value="3">3</option>
+               <option value="4">4</option>
+               <option value="5">5</option>
+               <option value="6">6</option>
+               <option value="7">7</option>
+               <option value="8">8</option>
+               <option value="9">9</option>
+               <option value="10">10</option>
+             </select>
+           </td>
+         </tr>
+         <tr>
+          <td style="padding-left:5px">Programs offered</td>
+          <td><input type="checkbox" class="checkbox" id="cb5" name="checkbox5" style="margin-left:5px;cursor: pointer;" /></td>
+          <td>
+            <select id="s5" style="margin-left:5px;cursor: pointer;">
+             <option value="1">1</option>
+             <option value="2">2</option>
+             <option value="3">3</option>
+             <option value="4">4</option>
+             <option value="5">5</option>
+             <option value="6">6</option>
+             <option value="7">7</option>
+             <option value="8">8</option>
+             <option value="9">9</option>
+             <option value="10">10</option>
+           </select>
+         </td>
+       </tr>
+       <tr>
+        <td style="padding-left:5px">Total publications</td>
+        <td><input type="checkbox" class="checkbox" id="cb6" name="checkbox6" style="margin-left:5px;cursor: pointer;" /></td>
+        <td>
+          <select id="s6" style="margin-left:5px;cursor: pointer;">
+           <option value="1">1</option>
+           <option value="2">2</option>
+           <option value="3">3</option>
+           <option value="4">4</option>
+           <option value="5">5</option>
+           <option value="6">6</option>
+           <option value="7">7</option>
+           <option value="8">8</option>
+           <option value="9">9</option>
+           <option value="10">10</option>
+         </select>
+       </td>
+     </tr>
+     <tr>
+      <td style="padding-left:5px">Ratio of full-time faculty to total faculty</td>
+      <td><input type="checkbox" class="checkbox" id="cb7" name="checkbox7" style="margin-left:5px;cursor: pointer;" /></td>
+      <td>
+        <select id="s7" style="margin-left:5px;cursor: pointer;">
+         <option value="1">1</option>
+         <option value="2">2</option>
+         <option value="3">3</option>
+         <option value="4">4</option>
+         <option value="5">5</option>
+         <option value="6">6</option>
+         <option value="7">7</option>
+         <option value="8">8</option>
+         <option value="9">9</option>
+         <option value="10">10</option>
+       </select>
+     </td>
+    </tr>
+    <tr>
+      <td style="padding-left:5px">Ratio of full-time PhD faculty to full-time total faculty</td>
+      <td><input type="checkbox" class="checkbox" id="cb8" name="checkbox8" style="margin-left:5px;cursor: pointer;" /></td>
+      <td>
+        <select id="s8" style="margin-left:5px;cursor: pointer;">
+         <option value="1">1</option>
+         <option value="2">2</option>
+         <option value="3">3</option>
+         <option value="4">4</option>
+         <option value="5">5</option>
+         <option value="6">6</option>
+         <option value="7">7</option>
+         <option value="8">8</option>
+         <option value="9">9</option>
+         <option value="10">10</option>
+       </select>
+     </td>
+    </tr>
+    <tr>
+      <td style="padding-left:5px">Books published</td>
+      <td><input type="checkbox" class="checkbox" id="cb9" name="checkbox9" style="margin-left:5px;cursor: pointer;" /></td>
+      <td>
+        <select id="s9" style="margin-left:5px;cursor: pointer;">
+         <option value="1">1</option>
+         <option value="2">2</option>
+         <option value="3">3</option>
+         <option value="4">4</option>
+         <option value="5">5</option>
+         <option value="6">6</option>
+         <option value="7">7</option>
+         <option value="8">8</option>
+         <option value="9">9</option>
+         <option value="10">10</option>
+       </select>
+     </td>
+    </tr>
+    <tr>
+      <td style="padding-left:5px">Conference Papers</td>
+      <td><input type="checkbox" class="checkbox" id="cb10" name="checkbox10" style="margin-left:5px;cursor: pointer;" /></td>
+      <td>
+        <select id="s10" style="margin-left:5px;cursor: pointer;">
+         <option value="1">1</option>
+         <option value="2">2</option>
+         <option value="3">3</option>
+         <option value="4">4</option>
+         <option value="5">5</option>
+         <option value="6">6</option>
+         <option value="7">7</option>
+         <option value="8">8</option>
+         <option value="9">9</option>
+         <option value="10">10</option>
+       </select>
+     </td>
+    </tr>
+    </table>
+    </div>
+    </div>
+
+
+
+    <div id="hideprogress" style="display: none;margin-top: 10% " >
+      <div class="circle">
+       <div class="borderCircle"></div>
+       <div class="borderCircle2"></div>
+       <div class="borderCircle3"></div>
+       <div class="innerCircle">
+           <p>Fetching Data...</p>
+       </div>
+       <div class="outerCirlce"></div>
+     </div> 
+    </div>
+
+
+    <div id="ranking_table">
+      <table id="table1" border="2px" align="center"  cellpadding="10px"></table>
+    </div>
+    <br>
+    <div id="hideresults" align="left" style="display: none">
+      <div id="radiobuttons">
+        <input type="radio" style="cursor: pointer;" name="Results" value="male" onclick="hideuniscrit()" checked="checked"> Show all results &nbsp;
+        <input type="radio" style="cursor: pointer;" name="Results" value="female" onclick="displayuniversities()"> Show filtered resutls 
+      </div>
+
+      <div id="checkboxes">
+
+      </div>
+    </div>
+    <br>
+    <div align="center">
+      <br>
+      <button id="mybackbutton" style="margin-left: 10px; cursor: pointer; display: none;" class="btn btn-primary btn-xl" onclick="backbutton()">BACK</button>
+      <a id="mymainbutton" style="margin-left: 10px; cursor: pointer;" class="btn btn-primary btn-xl" onclick="mainbutton()">NEXT</a>
+    </div>
+
+    </div>
+    <div id="myModal" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Graphical Representation</h4>
+          </div>
+          <div class="modal-body">
+            <div id="chartContainer" style="height: 400px;width: 100%">
+
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <script src="js/canvasjs.min.js"></script>
+    <!--script src="http://jqueryjs.googlecode.com/files/jquery-1.3.2.js" ></script-->
+    <script>
+      var criteriasinfo = [];
+      var weight = [];
+      var universities =[];
+      var filteruniindex = [];
+      var filtercriindex =[];
+      var totalfaculty =[];
+      var filteredfaculty =[]; 
+      var count=0;
+      var count1=0;
+      var count2=0;
+      var count3=0;
+      var counter =0;
+      var criserver =[];
+      var ranks=[];
+      var sum=0;
+      var val=0;
+      var criresults = [];
+      var temp=[];
+      var tempy =0;
+      var names = [];
+      var realnames = [];
+      var filteredweights=[];
+      var uni_urls =[];
+      var uni_name_string = [];
+      var sortcheck=1;
+      document.body.style.backgroundAttachment="fixed";
+
+  function backbutton()
+  {
+    var bck = document.getElementById('mybackbutton');
+    var nxt = document.getElementById('mymainbutton');
+    var hh = document.getElementById('homeHeading');
+
+    if(hh.innerHTML=="Select Criteria and assign weightages")
+    {
+
+      bck.style.display='none';
+      nxt.innerHTML="NEXT";
+      document.getElementById('homeHeading').innerHTML = "Enter URL's of universities";
+      document.getElementById('hidecriteria').style.display = 'none';
+      document.getElementById('hideuni').style.display = 'inline-block';
+    }
+    else if(hh.innerHTML=="Calculating Results")
+    {
+       document.getElementById('gsearch').style.display = 'inline-block';
+       document.getElementById('mybackbutton').innerHTML = 'Back';
+       document.getElementById('hidecriteria').style.display = 'inline-block';
+       document.getElementById('mymainbutton').style.display = 'inline-block';
+       document.getElementById('homeHeading').innerHTML = "Select Criteria and assign weightages";
+       document.getElementById('hideprogress').style.display='none';
+       document.getElementById('mymainbutton').style.display = 'inline-block';
+
+
+       var xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+
+        if (this.readyState == 4 && this.status == 200) {
+          helo=this.responseText;
+          };
+          xhttp.open("GET", "/stopexecution", true);
+          xhttp.setRequestHeader("Content-type", "application/json");
+          xhttp.send();
+        }
+    }
+    else if(hh.innerHTML=="Results")
+    {
+       document.getElementById('gsearch').style.display = 'inline-block';
+       document.getElementById('hidecriteria').style.display = 'inline-block';
+       document.getElementById('mymainbutton').style.display = 'inline-block';
+       document.getElementById('homeHeading').innerHTML = "Select Criteria and assign weightages";
+       document.getElementById('hideprogress').style.display='none';
+       document.getElementById('mymainbutton').style.display = 'inline-block';
+       document.getElementById('table1').style.display = 'none';
+       document.getElementById('hideresults').style.display='none';
+       document.getElementById('checkboxes').style.display='none';
+    }
+    
+  }
+  function mainbutton()
+    {
+      counter=0;
+     var mainbuttontext = document.getElementById('mymainbutton').innerHTML;
+     var totalunis=document.getElementById('url-table').rows.length;
+     if(mainbuttontext == "NEXT" )
+     {
+
+      if(totalunis==0)
+      {
+       alert("Please enter atleast one university to continue");
+     }
+     else
+     {
+       document.getElementById('mymainbutton').innerHTML = "CALCULATE RANKING";
+       document.getElementById('hideuni').style.display = 'none';
+       document.getElementById('hidecriteria').style.display = 'inline-block';
+       document.getElementById('homeHeading').innerHTML = "Select Criteria and assign weightages";
+       document.getElementById('mybackbutton').style.display = 'inline-block';
+     }
+
+    }
+    else if(mainbuttontext== "CALCULATE RANKING")
+    {
+
+      var cb1 = document.getElementById('cb1').checked;
+      var cb2 = document.getElementById('cb2').checked;
+      var cb3 = document.getElementById('cb3').checked;
+      var cb4 = document.getElementById('cb4').checked;
+      var cb5 = document.getElementById('cb5').checked;
+      var cb6 = document.getElementById('cb6').checked;
+      var cb7 = document.getElementById('cb7').checked;
+      var cb8 = document.getElementById('cb8').checked;
+      var cb9 = document.getElementById('cb9').checked;
+      var cb10 = document.getElementById('cb10').checked;
+      if(cb1==false && cb2==false && cb3==false && cb4==false && cb5==false && cb6==false && cb7==false && cb8==false && cb9==false && cb10==false)
+      {
+       alert("Please select atleast one criteria to continue");
+     }
+     else
+     {
+       document.getElementById('gsearch').style.display = 'none';
+       document.getElementById('mybackbutton').innerHTML = 'Cancel';
+       document.getElementById('hidecriteria').style.display = 'none';
+       document.getElementById('mymainbutton').style.display = 'none';
+       document.getElementById('homeHeading').innerHTML = "Calculating Results";
+       document.getElementById('hideprogress').style.display='inline-block';
+       document.getElementById('mymainbutton').style.display = 'none';
+       getArray();
+       senddatatoserver();
+       uni_urls=[];
+       uni_name_string=[];
+       uni_urls = JSON.stringify(universities);
+       var xhttp = new XMLHttpRequest();
+       xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+          helo=this.responseText;
+          uni_name_string = JSON.parse(helo);
+        }
+      };
+      xhttp.open("GET", "/getuniname?second="+uni_urls, true);
+      xhttp.setRequestHeader("Content-type", "application/json");
+      xhttp.send();
+
+
+
+
+            //rankunis();
+            asad(counter);
+            //hideprogbar();
+            //calculateRanking();
+
+          }
+          
+        }
+
+      }
+    
+      function sortTable(c)
+      {
+        var table = document.getElementById("table1");
+        for (var i=0;i< universities.length;i++)
+        {
+          for(var j=0;j<universities.length;j++)
+          {
+
+            if(parseInt(table.rows[i+3].cells[c+2].innerHTML) > parseInt(table.rows[j+3].cells[c+2].innerHTML) && sortcheck==0)
+            {
+              for(var k =1;k<criteriasinfo.length+3;k++)
+              {
+                var temp = table.rows[i+3].cells[k].innerHTML;
+                table.rows[i+3].cells[k].innerHTML = table.rows[j+3].cells[k].innerHTML;
+                table.rows[j+3].cells[k].innerHTML = temp;
+              }
+            }
+            else if(sortcheck==1 && parseInt(table.rows[i+3].cells[c+2].innerHTML) < parseInt(table.rows[j+3].cells[c+2].innerHTML))
+            {
+              for(var k =1;k<criteriasinfo.length+3;k++)
+              {
+                var temp = table.rows[i+3].cells[k].innerHTML;
+                table.rows[i+3].cells[k].innerHTML = table.rows[j+3].cells[k].innerHTML;
+                table.rows[j+3].cells[k].innerHTML = temp;
+              }
+            }
+          }
+        }
+        if(sortcheck==0)
+        {
+          sortcheck=1;
+        }
+        else
+        {
+          sortcheck=0;
+        }
+      }
+
+
+      function sortFiltered(c)
+      {
+        var table = document.getElementById("table1");
+        for (var i=0;i< filteruniindex.length;i++)
+        {
+          for(var j=0;j<filteruniindex.length;j++)
+          {
+
+            if(parseInt(table.rows[i+3].cells[c+2].innerHTML) > parseInt(table.rows[j+3].cells[c+2].innerHTML) && sortcheck==0)
+            {
+              for(var k =1;k<filtercriindex.length+3;k++)
+              {
+                var temp = table.rows[i+3].cells[k].innerHTML;
+                table.rows[i+3].cells[k].innerHTML = table.rows[j+3].cells[k].innerHTML;
+                table.rows[j+3].cells[k].innerHTML = temp;
+              }
+            }
+            else if(sortcheck==1 && parseInt(table.rows[i+3].cells[c+2].innerHTML) < parseInt(table.rows[j+3].cells[c+2].innerHTML))
+            {
+              for(var k =1;k<filtercriindex.length+3;k++)
+              {
+                var temp = table.rows[i+3].cells[k].innerHTML;
+                table.rows[i+3].cells[k].innerHTML = table.rows[j+3].cells[k].innerHTML;
+                table.rows[j+3].cells[k].innerHTML = temp;
+              }
+            }
+          }
+        }
+        if(sortcheck==0)
+        {
+          sortcheck=1;
+        }
+        else
+        {
+          sortcheck=0;
+        }
+      }
+
+      function filteredresults()
+      {
+        filteruniindex=[];
+        filtercriindex=[];
+        filteredfaculty=[];
+        filteredweights =[];
+        var chk_arr1 =  document.getElementsByName("unicheck");
+        var chklength1 = chk_arr1.length;             
+
+        for(k=0;k< chklength1;k++)
+        {
+          if(chk_arr1[k].checked == true)
+          {
+            filteruniindex.push(k);
+            filteredfaculty.push(totalfaculty[k]);
+
+          }
+        }
+
+        var chk_arr2 =  document.getElementsByName("cricheck");
+        var chklength2 = chk_arr2.length;             
+        var row;
+        var cell1;
+        var cell2;
+        var cell3;
+        var un;
+        var cr;
+        for(k=0;k< chklength2;k++)
+        {
+          if(chk_arr2[k].checked == true)
+          {
+            filtercriindex.push(k);
+            filteredweights.push(k);
+          }
+        }
+        var totaluni = filteruniindex.length ;
+        var totalcrit = filtercriindex.length;
+        if(totaluni > 0 && totalcrit > 0)
+        {
+          count1 = 0;
+          var table = document.getElementById('table1');
+      //document.getElementById('ranking_table').style.display='inline-block';
+      table.style.display='inline-block';
+      table.innerHTML="";
+        // Create an empty <tr> element and add it to the 1st position of the table:
+        rankfilteredunis();
+        if(totaluni>0)
+        {
+          var row = table.insertRow(count1);
+          var cell1 = row.insertCell(0);
+          var cell2 = row.insertCell(1);
+          var cell3 = row.insertCell(2);
+          var cell4 = row.insertCell(3);
+          cell1.rowSpan =3;
+          cell2.rowSpan =3;
+          cell3.colSpan = totalcrit;
+          cell4.rowSpan =3;
+
+      // Add some text to the new cells:
+      cell1.innerHTML = "SNO";
+      cell2.innerHTML = "University";
+      cell3.innerHTML = "Weights and Criteria";
+      cell4.innerHTML = "Ranking"
+
+      count1++;
+      row = table.insertRow(count1);
+      for(var y =0;y<filteredweights.length;y++)
+      {
+        cell1 = row.insertCell(y);
+        cell1.innerHTML= weight[filteredweights[y]];
+      }
+
+      count1++;
+      row = table.insertRow(count1);
+      for(var r =0;r<totalcrit;r++)
+      {
+        cell1 = row.insertCell(r);
+        cell1.innerHTML= criteriasinfo[filtercriindex[r]];
+        var myrow;
+        var mycol;
+        cell1.addEventListener("click", function(){
+          mycol =this.cellIndex;
+          myrow = this.parentNode.rowIndex;
+          sortFiltered(mycol);
+          }, false);
+        cell1.style.cursor = "pointer";
+      }
+
+      count1++;
+      for(var i =0; i<totaluni; i++)
+      {
+        row = table.insertRow(count1);
+        cell1 = row.insertCell(0);
+        cell1.innerHTML = count1-2;
+
+        cell2 = row.insertCell(1);
+        cell2.innerHTML = uni_name_string[filteruniindex[i]];
+
+
+        for(var j = 0; j<totalcrit;j++)
+        {
+          cell3 = row.insertCell(j+2);
+          cell3.style.color="orange";
+          cell3.style.textdecoration="underline";
+          cell3.innerHTML = totalfaculty[filteruniindex[i]][filtercriindex[j]];
+        //cell3.innerHTML ="1";
+              //cell3.setAttribute('onclick', 'alert("hello")');
+              var myrow;
+              var mycol;
+              cell3.addEventListener("click", function(){
+                mycol =this.cellIndex;
+                myrow = this.parentNode.rowIndex;
+                var tex = table.rows[2].cells[mycol-2].innerHTML;
+                displayChart1(myrow,tex);}, false);
+              cell3.style.cursor = "pointer";
+            }
+      // Add some text to the new cells:
+      cell4= row.insertCell(totalcrit+2);
+      cell4.innerHTML=criresults[i];
+
+      count1++;
+    }
+    }
+    else
+    {
+      alert("Please select atleast one university and one criteria");
+    }
+    sortFiltered(totalcrit);
+    }
+    }
+
+    function calculateRanking()
+    {
+        
+        var row;
+        var cell1;
+        var cell2;
+        var cell3;
+        var un;
+        var cr;
+        count1=0;
+      /*var table1 = document.getElementById("url-table");
+      var u ;
+      var rows = table1.rows.length;
+      if(rows>1)
+      {
+        for ( var i = 1; i < table1.rows.length; i++)
+        {
+          universities.push({uni: table1.rows[n].cells[1].innerHTML});
+        }
+      } */
+
+      //document.getElementById('ranking_table').style.display='inline-block';
+      var table = document.getElementById('table1');
+      table.style.display='inline-block';
+      table.innerHTML="";
+      rankunis();
+      // Create an empty <tr> element and add it to the 1st position of the table:
+      var totaluni = universities.length ;
+      var totalcrit = criteriasinfo.length;
+      
+      if(totaluni>0)
+      {
+        var row = table.insertRow(count1);
+        var cell1 = row.insertCell(0);
+        var cell2 = row.insertCell(1);
+        var cell3 = row.insertCell(2);
+        var cell4 = row.insertCell(3);
+        cell1.rowSpan =3;
+        cell2.rowSpan =3;
+        cell4.rowSpan =3;
+        cell3.colSpan = totalcrit;
+        cell1.innerHTML ="Sno."
+        cell2.innerHTML = "University";
+        cell3.innerHTML = "Weights and Criteria";
+        cell4.innerHTML = "Ranking";
+        count1++;
+        row = table.insertRow(count1);
+        for(var y =0;y<weight.length;y++)
+        {
+          cell1 = row.insertCell(y);
+          cell1.innerHTML= weight[y];
+        }
+
+        count1++;
+        row = table.insertRow(count1);
+        for(var r =0;r<criteriasinfo.length;r++)
+        {
+          cell1 = row.insertCell(r);
+          cell1.innerHTML= criteriasinfo[r];
+          cell1.addEventListener("click", function(){
+            myrow =this.parentNode.rowIndex;
+            mycol =this.cellIndex;
+            sortTable(mycol); } , false);
+          cell1.style.cursor = "pointer";
+        }
+        count1++;
+      } 
+      for(var i =0; i<totaluni; i++)
+      {
+        row = table.insertRow(count1);
+        cell1 = row.insertCell(0);
+        cell1.innerHTML = count1-2;
+        
+        cell2 = row.insertCell(1);
+        cell2.innerHTML = uni_name_string[i];
+
+        
+        for(var j = 0; j<totalcrit;j++)
+        {
+          cell3 = row.insertCell(j+2);
+          cell3.style.color="orange";
+          cell3.style.textdecoration="underline";
+          
+          if(table.rows[2].cells[j].innerHTML == "Total Faculty")
+          {
+            cell3.innerHTML = totalfaculty[i][0];
+            //cell3.innerHTML = "1";
+          }
+          else if(table.rows[2].cells[j].innerHTML == "Total PhD professors")
+          {
+            cell3.innerHTML = totalfaculty[i][1];
+            //cell3.innerHTML = "1";
+          }
+          else if(table.rows[2].cells[j].innerHTML == "Foreign qualified PhD professors")
+          {
+            cell3.innerHTML = totalfaculty[i][2];
+            //cell3.innerHTML = "1";
+          }
+          //cell3.setAttribute('onclick', 'alert("hello")');  
+          
+          var myrow;
+          var mycol;
+          cell3.addEventListener("click", function(){
+            myrow =this.parentNode.rowIndex;
+            mycol =this.cellIndex;
+            var tex = table.rows[2].cells[mycol-2].innerHTML;
+            displayChart(myrow,tex);}  , false);
+          cell3.style.cursor = "pointer";
+        }
+
+
+
+        cell4= row.insertCell(totalcrit+2);
+        cell4.innerHTML=criresults[i];
+
+        count1++;
+      }
+      sortTable(criteriasinfo.length);
+      // Insert new cells (<td> elements) at the 1st and 2nd position of the "new" <tr> element:
+
+    }
+
+
+    function rankfilteredunis()
+    {
+      var table = document.getElementById('table1');
+
+      for(var n=0;n<filteruniindex.length;n++)
+      {
+        sum =0;
+        for(var i=0;i<filtercriindex.length;i++)
+        {
+          if(criteriasinfo[filtercriindex[i]] == "Total Faculty")
+          {
+            val = totalfaculty[filteruniindex[n]][0];
+          }
+          else if(criteriasinfo[filtercriindex[i]] == "Total PhD professors")
+          {
+            val = totalfaculty[filteruniindex[n]][1];
+          }
+          else if(criteriasinfo[filtercriindex[i]] == "Foreign qualified PhD professors")
+          {
+            val = totalfaculty[filteruniindex[n]][2];
+          }
+          else if(criteriasinfo[filtercriindex[i]] == "Research groups")
+          {
+            val = totalfaculty[filteruniindex[n]][3];
+          }
+          else if(criteriasinfo[filtercriindex[i]] == "Programs offered")
+          {
+            val = totalfaculty[filteruniindex[n]][4];
+          }
+          else if(criteriasinfo[filtercriindex[i]] == "Total publications")
+          {
+            val = totalfaculty[filteruniindex[n]][5];
+          }
+          else if(criteriasinfo[filtercriindex[i]] == "Ratio of full-time faculty to total faculty")
+          {
+            val = totalfaculty[filteruniindex[n]][6];
+          }
+          else if(criteriasinfo[filtercriindex[i]] == "Ratio of PhD professors to total full-time faculty")
+          {
+            val = totalfaculty[filteruniindex[n]][7];
+          }
+          else if(criteriasinfo[filtercriindex[i]] == "Books published")
+          {
+            val = totalfaculty[filteruniindex[n]][8];
+          }
+          else if(criteriasinfo[filtercriindex[i]] == "Conference papers")
+          {
+            val = totalfaculty[filteruniindex[n]][9];
+          }
+          tempy = val*weight[i];
+          sum = sum+tempy;
+
+        }
+        ranks[n]=sum;
+      }
+      for(var t=0;t<ranks.length;t++)
+      {
+        criresults[t]=1;
+      }
+
+      for(var a=0;a<ranks.length;a++)
+      {
+        for(var b=0;b<ranks.length;b++)
+        {
+          if(ranks[b]>ranks[a])
+          {
+            criresults[a]++;
+          }
+        }
+      }
+
+    }
+    function rankunis()
+    {
+      var table = document.getElementById('table1');
+
+      for(var n=0;n<universities.length;n++)
+      {
+        sum =0;
+        for(var i=0;i<criteriasinfo.length;i++)
+        {
+          if(criteriasinfo[i] == "Total Faculty")
+          {
+            val = totalfaculty[n][0];
+          }
+          else if(criteriasinfo[i] == "Total PhD professors")
+          {
+            val = totalfaculty[n][1];
+          }
+          else if(criteriasinfo[i] == "Foreign qualified PhD professors")
+          {
+            val = totalfaculty[n][2];
+          }
+          else if(criteriasinfo[i] == "Research groups")
+          {
+            val = totalfaculty[n][3];
+          }
+          else if(criteriasinfo[i] == "Programs offered")
+          {
+            val = totalfaculty[n][4];
+          }
+          else if(criteriasinfo[i] == "Total publications")
+          {
+            val = totalfaculty[n][5];
+          }
+          else if(criteriasinfo[i] == "Ratio of full-time faculty to total faculty")
+          {
+            val = totalfaculty[n][6];
+          }
+          else if(criteriasinfo[i] == "Ratio of PhD professors to total full-time faculty")
+          {
+            val = totalfaculty[n][7];
+          }
+          else if(criteriasinfo[i] == "Books published")
+          {
+            val = totalfaculty[n][8];
+          }
+          else if(criteriasinfo[i] == "Conference papers")
+          {
+            val = totalfaculty[n][9];
+          }
+          tempy = val*weight[i];
+          sum = sum+tempy;
+
+        }
+        ranks[n]=sum;
+      }
+      for(var t=0;t<ranks.length;t++)
+      {
+        criresults[t]=1;
+      }
+
+      for(var a=0;a<ranks.length;a++)
+      {
+       for(var b=0;b<ranks.length;b++)
+       {
+        if(ranks[b]>ranks[a])
+        {
+         criresults[a]++;
+       }
+     }
+    }
+    }
+
+    function senddatatoserver()
+    {
+      criserver=[];
+      for(var i=0;i<criteriasinfo.length;i++)
+      {
+       if(criteriasinfo[i] == "Total Faculty")
+       {
+        criserver.push("fac");
+      }
+      else if(criteriasinfo[i] == "Total PhD professors")
+      {
+        criserver.push("phd");
+      }
+      else if(criteriasinfo[i] == "Foreign qualified PhD professors")
+      {
+        criserver.push("fphd");
+      }
+      else if(criteriasinfo[i] == "Research groups")
+      {
+        criserver.push("rg");
+      }
+      else if(criteriasinfo[i] == "Programs offered")
+      {
+        criserver.push("po");
+      }
+      else if(criteriasinfo[i] == "Total publications")
+      {
+        criserver.push("tp");
+      }
+      else if(criteriasinfo[i] == "Ratio of full-time faculty to total faculty")
+      {
+        criserver.push("rv_total");
+      }
+      else if(criteriasinfo[i] == "Ratio of PhD professors to total full-time faculty")
+      {
+        criserver.push("rt_phd");
+      }
+      else if(criteriasinfo[i] == "Books published")
+      {
+        criserver.push("bp");
+      }
+      else if(criteriasinfo[i] == "Conference papers")
+      {
+        criserver.push("cp");
+      }
+    }
+
+
+
+    }
+
+      function asad(ll)
+      {
+        var temp =[];
+        temp.push(universities[ll]);
+        loadDoc(temp,criserver);
+      }
+      function addUrlFunc()
+      {
+       var u = document.getElementById('urlBar');
+       var uni = document.getElementById('urlBar').value;
+       var check = validateUrl(uni);
+       if(check==true)
+       {
+         var table = document.getElementById('url-table');
+         table.border="2px";
+
+         if(count3==0)
+         {
+          var row = table.insertRow(count3);
+          var cell1 = row.insertCell(0);
+          var cell2 = row.insertCell(1);
+          var cell3 = row.insertCell(2);
+          cell1.innerHTML = "SNO";
+          cell2.innerHTML = "University";
+          count3++;
+          u.value = "";
+        }
+        // Create an empty <tr> element and add it to the 1st position of the table:
+        var row = table.insertRow(count3);
+        // Insert new cells (<td> elements) at the 1st and 2nd position of the "new" <tr> element:
+        var cell1 = row.insertCell(0);
+        var cell2 = row.insertCell(1);
+        var cell3 = row.insertCell(2);
+        
+        // Add some text to the new cells:
+        cell1.innerHTML = count3;
+        cell2.innerHTML = uni;
+        cell3.innerHTML = "Delete";
+        cell3.style.cursor = "pointer";
+        cell3.style.color="#004080";
+        cell3.style.textDecoration = "underline";
+        cell3.addEventListener("click", function(){
+            var myrow =this.parentNode.rowIndex;
+            table.deleteRow(myrow);
+            var l = document.getElementById("url-table").rows.length;
+            if(l==1)
+            {
+              table.deleteRow(0);
+              count3=0;
+            }
+            else
+            {
+            for(var i =1;i<l;i++)
+            {
+              table.rows[i].cells[0].innerHTML = i;
+              count3 = i+1;
+            }
+          }
+          }  , false);
+          
+        count3++;
+        u.value = "";
+      }
+      else
+      {
+        alert("Invalid url, Please re-enter");
+        document.getElementById('urlBar').value= "";
+      }
+    }
+
+    function hideprogbar()
+    {
+     document.getElementById('hideprogress').style.display='none';
+     document.getElementById('homeHeading').innerHTML = "Results";
+     document.getElementById('hideresults').style.display = 'inline-block';
+     document.getElementById('mybackbutton').innerHTML= "Back";
+
+     calculateRanking();
+    }
+
+
+
+    function displayChart(z,c)
+    { 
+      var r=z-3;
+      if(c == "Total Faculty")
+      {
+          //alert("tf");
+          var a1 = parseInt(totalfaculty[r][10][0],10);
+          var a2 = parseInt(totalfaculty[r][10][1],10);
+          var a3 = parseInt(totalfaculty[r][10][2],10);
+          var a4 = parseInt(totalfaculty[r][10][3],10);
+          var a5 = parseInt(totalfaculty[r][10][4],10);
+          var a6 = parseInt(totalfaculty[r][10][5],10);
+          $('#myModal').modal('show');
+          var chart = new CanvasJS.Chart("chartContainer",
+          {
+           title:{
+            text: "Faculty Details"
+          },
+          legend: {
+            maxWidth: 350,
+            itemWidth: 120
+          },
+          data: [
+          {
+            type: "pie",
+            showInLegend: true,
+            legendText: "{indexLabel}",
+            dataPoints: [
+
+            ]
+          }
+
+          ]
+        });
+          chart.options.data[0].dataPoints = [];
+          chart.options.data[0].dataPoints.push({ y: a1 ,indexLabel: 'Associate professors'});
+          chart.options.data[0].dataPoints.push({ y: a2 ,indexLabel: 'Assistant professors'});
+          chart.options.data[0].dataPoints.push({ y: a3 ,indexLabel: 'Visiting professors'});
+          chart.options.data[0].dataPoints.push({ y: a4 ,indexLabel: 'Lecturers'});
+          chart.options.data[0].dataPoints.push({ y: a5 ,indexLabel: 'Instructors'});
+          chart.options.data[0].dataPoints.push({ y: a6 ,indexLabel: 'Lab Engineers'});
+          chart.render();
+
+        }
+        else if(c == "Total PhD professors")
+        {
+          //alert("phd");
+          var tf = parseInt(totalfaculty[r][0],10);
+          //alert(tf);
+          var phdfac = parseInt(totalfaculty[r][1],10);
+          //alert(phdfac);
+          var n = tf-phdfac;
+          var nonphd = parseInt(n,10);
+
+          $('#myModal').modal('show');
+          var chart = new CanvasJS.Chart("chartContainer",
+          {
+           title:{
+            text: "PhD vs Non PhD"
+          },
+          legend: {
+            maxWidth: 350,
+            itemWidth: 120
+          },
+          data: [
+          {
+            type: "pie",
+            showInLegend: true,
+            legendText: "{indexLabel}",
+            dataPoints: [
+            ]
+          }
+
+          ]
+        });
+          chart.options.data[0].dataPoints = [];
+          chart.options.data[0].dataPoints.push({ y: phdfac ,indexLabel: 'PhD professors'});
+          chart.options.data[0].dataPoints.push({ y: nonphd ,indexLabel: 'Non PhD professors'});
+          chart.render();
+
+        }
+        else if(c == "Foreign qualified PhD professors")
+        {
+          //alert("fphd");
+          var phdfac = parseInt(totalfaculty[r][1],10);
+          var fphd = parseInt(totalfaculty[r][2],10);
+          var nf = phdfac-fphd;
+          var nonfphd = parseInt(nf,10);
+
+
+          $('#myModal').modal('show');
+          var chart = new CanvasJS.Chart("chartContainer",
+          {
+           title:{
+            text: "PhD vs Foreign"
+          },
+          legend: {
+            maxWidth: 350,
+            itemWidth: 120
+          },
+          data: [
+          {
+            type: "pie",
+            showInLegend: true,
+            legendText: "{indexLabel}",
+            dataPoints: [
+            ]
+          }
+
+          ]
+        });
+          chart.options.data[0].dataPoints = [];
+          chart.options.data[0].dataPoints.push({ y: fphd ,indexLabel: 'Foreign PhD professors'});
+          chart.options.data[0].dataPoints.push({ y: nonfphd ,indexLabel: 'Non Foreign PhD professors'});
+          chart.render();
+
+        }
+      }
+
+      function displayChart1(z,c)
+      { 
+        var r=z-3;
+        if(c == "Total Faculty")
+        {
+          //alert("tf");
+          var a1 = parseInt(filteredfaculty[r][10][0],10);
+          var a2 = parseInt(filteredfaculty[r][10][1],10);
+          var a3 = parseInt(filteredfaculty[r][10][2],10);
+          var a4 = parseInt(filteredfaculty[r][10][3],10);
+          var a5 = parseInt(filteredfaculty[r][10][4],10);
+          var a6 = parseInt(filteredfaculty[r][10][5],10);
+          $('#myModal').modal('show');
+          var chart = new CanvasJS.Chart("chartContainer",
+          {
+            title:{
+              text: "Faculty Details"
+            },
+            legend: {
+              maxWidth: 350,
+              itemWidth: 120
+            },
+            data: [
+            {
+              type: "pie",
+              showInLegend: true,
+              legendText: "{indexLabel}",
+              dataPoints: [
+
+              ]
+            }
+
+            ]
+          });
+          chart.options.data[0].dataPoints = [];
+          chart.options.data[0].dataPoints.push({ y: a1 ,indexLabel: 'Associate professors'});
+          chart.options.data[0].dataPoints.push({ y: a2 ,indexLabel: 'Assistant professors'});
+          chart.options.data[0].dataPoints.push({ y: a3 ,indexLabel: 'Visiting professors'});
+          chart.options.data[0].dataPoints.push({ y: a4 ,indexLabel: 'Lecturers'});
+          chart.options.data[0].dataPoints.push({ y: a5 ,indexLabel: 'Instructors'});
+          chart.options.data[0].dataPoints.push({ y: a6 ,indexLabel: 'Lab Engineers'});
+          chart.render();
+
+        }
+        else if(c == "Total PhD professors")
+        {
+          //alert("phd");
+          var tf = parseInt(filteredfaculty[r][0],10);
+          //alert(tf);
+          var phdfac = parseInt(filteredfaculty[r][1],10);
+          //alert(phdfac);
+          var n = tf-phdfac;
+          var nonphd = parseInt(n,10);
+
+          $('#myModal').modal('show');
+          var chart = new CanvasJS.Chart("chartContainer",
+          {
+            title:{
+              text: "PhD vs Non PhD"
+            },
+            legend: {
+              maxWidth: 350,
+              itemWidth: 120
+            },
+            data: [
+            {
+              type: "pie",
+              showInLegend: true,
+              legendText: "{indexLabel}",
+              dataPoints: [
+              ]
+            }
+
+            ]
+          });
+          chart.options.data[0].dataPoints = [];
+          chart.options.data[0].dataPoints.push({ y: phdfac ,indexLabel: 'PhD professors'});
+          chart.options.data[0].dataPoints.push({ y: nonphd ,indexLabel: 'Non PhD professors'});
+          chart.render();
+
+        }
+        else if(c == "Foreign qualified PhD professors")
+        {
+          //alert("fphd");
+          var phdfac = parseInt(filteredfaculty[r][1],10);
+          var fphd = parseInt(filteredfaculty[r][2],10);
+          var nf = phdfac-fphd;
+          var nonfphd = parseInt(nf,10);
+
+
+          $('#myModal').modal('show');
+          var chart = new CanvasJS.Chart("chartContainer",
+          {
+            title:{
+              text: "PhD vs Foreign"
+            },
+            legend: {
+              maxWidth: 350,
+              itemWidth: 120
+            },
+            data: [
+            {
+              type: "pie",
+              showInLegend: true,
+              legendText: "{indexLabel}",
+              dataPoints: [
+              ]
+            }
+
+            ]
+          });
+          chart.options.data[0].dataPoints = [];
+          chart.options.data[0].dataPoints.push({ y: fphd ,indexLabel: 'Foreign PhD professors'});
+          chart.options.data[0].dataPoints.push({ y: nonfphd ,indexLabel: 'Non Foreign PhD professors'});
+          chart.render();
+
+        }
+      }
+
+
+
+      function loadDoc(a,b) {
+        var arr1 = JSON.stringify(b);
+        var arr2 = JSON.stringify(a);
+        alert(arr1);
+        alert(arr2);
+      //alert("bullshit");
+      var xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+
+        if (this.readyState == 4 && this.status == 200) {
+          helo=this.responseText;
+
+          var myJsonString = JSON.parse(helo);
+          totalfaculty.push(myJsonString);
+              //alert(totalfaculty);
+              counter++;
+              if(counter<universities.length)
+              {
+                asad(counter);  
+              }
+              if(counter==universities.length)
+              {
+                hideprogbar();
+              }
+              //alert(myJsonString);
+
+            }
+          };
+          xhttp.open("GET", "/check?first="+arr1+"&second="+arr2, true);
+          xhttp.setRequestHeader("Content-type", "application/json");
+          xhttp.send();
+        }
+
+
+
+
+        function hideuniscrit()
+        {
+         document.getElementById('checkboxes').style.display='none';
+      //document.getElementById('ranking_table').style.display='inline-block';
+      document.getElementById('table1').style.display='inline-block';
+      calculateRanking();
+    }
+
+
+
+    function displayuniversities()
+    {
+      //document.getElementById('ranking_table').style.display='none';
+      document.getElementById('table1').style.display='none';
+      var cbh = document.getElementById('checkboxes');
+      cbh.style.display='inline-block';
+      while (cbh.hasChildNodes())
+      {
+        cbh.removeChild(cbh.lastChild);
+      }
+      var br = document.createElement('br');
+      cbh.appendChild(br);
+      var lab = document.createElement('h3');
+      lab.innerHTML = "Please filter universities"
+      cbh.appendChild(lab);
+      
+      for (var i = 0; i < universities.length; i++)
+      {
+        var val = i;
+        var cap = universities[i];
+        var cb = document.createElement('input');
+        cb.type = 'checkbox';
+        cbh.appendChild(cb);
+        cb.name = "unicheck";
+        cb.value = cap;
+        cbh.appendChild(document.createTextNode(cap));
+        var br = document.createElement('br');
+        cbh.appendChild(br);
+      }
+      var br = document.createElement('br');
+      cbh.appendChild(br);
+
+
+      var lab = document.createElement('h3');
+      lab.innerHTML = "Please filter criteria"
+      cbh.appendChild(lab);
+      
+      for (var j = 0; j < criteriasinfo.length; j++)
+      {
+        var val = j;
+        var cap = criteriasinfo[j];
+        var cb = document.createElement('input');
+        cb.type = 'checkbox';
+        cbh.appendChild(cb);
+        cb.name = "cricheck";
+        cb.value = cap;
+        cbh.appendChild(document.createTextNode(cap));
+        var br = document.createElement('br');
+        cbh.appendChild(br);
+      }
+
+      var br = document.createElement('br');
+      cbh.appendChild(br);
+
+      var button = document.createElement('button');
+      button.innerHTML = "Show Filtered Results";
+      button.style.cursor = 'pointer';
+      button.setAttribute("class", "btn btn-primary btn-xl");
+      button.setAttribute("id","filterbutton"); 
+      cbh.appendChild(button);
+      button.addEventListener ("click", filteredresults );
+    }
+
+    function getArray() {
+
+      var table1 = document.getElementById("url-table");
+      var u;
+      universities=[];
+      var rows = table1.rows.length;
+      if (rows > 1) {
+        alert(table1.rows[1].cells[1].innerHTML);
+        for (i = 1;i<table1.rows.length;i++) {
+          alert(table1.rows[i].cells[1].innerHTML);
+          universities.push(table1.rows[i].cells[1].innerHTML);
+        }
+      }
+      var table2 = document.getElementById("criteria-table");
+      var rows2 = table1.rows.length;
+      if (rows > 1) {
+        criteriasinfo = [];
+        weight = [];
+        var cbValue = document.getElementById("cb1").checked;
+        if (cbValue == true) {
+          var sel = document.getElementById("s1");
+          var sv = sel.options[sel.selectedIndex].value;
+          criteriasinfo.push("Total Faculty");
+          weight.push(sv);
+        }
+        var cbValue = document.getElementById("cb2").checked;
+        if (cbValue == true) {
+          var sel = document.getElementById("s2");
+          var sv = sel.options[sel.selectedIndex].value;
+          weight.push(sv);
+          criteriasinfo.push("Total PhD professors");
+        }
+        var cbValue = document.getElementById("cb3").checked;
+        if (cbValue == true) {
+         var sel = document.getElementById("s3");
+         var sv = sel.options[sel.selectedIndex].value;
+         weight.push(sv);
+         criteriasinfo.push("Foreign qualified PhD professors");
+       }
+       var cbValue = document.getElementById("cb4").checked;
+       if (cbValue == true) {
+        var sel = document.getElementById("s1");
+        var sv = sel.options[sel.selectedIndex].value;
+        weight.push(sv);
+        criteriasinfo.push("Research groups");
+      }
+      var cbValue = document.getElementById("cb5").checked;
+      if (cbValue == true) {
+        var sel = document.getElementById("s1");
+        var sv = sel.options[sel.selectedIndex].value;
+        weight.push(sv);
+        criteriasinfo.push("Programs offered");
+      }
+      var cbValue = document.getElementById("cb6").checked;
+      if (cbValue == true) {
+        var sel = document.getElementById("s1");
+        var sv = sel.options[sel.selectedIndex].value;
+        weight.push(sv);
+        criteriasinfo.push("Total publications");
+      }
+      var cbValue = document.getElementById("cb7").checked;
+      if (cbValue == true) {
+        var sel = document.getElementById("s1");
+        var sv = sel.options[sel.selectedIndex].value;
+        weight.push(sv);
+        criteriasinfo.push("Ratio of full-time faculty to total faculty");
+      }
+      var cbValue = document.getElementById("cb8").checked;
+      if (cbValue == true) {
+        var sel = document.getElementById("s1");
+        var sv = sel.options[sel.selectedIndex].value;
+        weight.push(sv);
+        criteriasinfo.push("Ratio of PhD to full-time total faculty");
+      }
+      var cbValue = document.getElementById("cb9").checked;
+      if (cbValue == true) {
+        var sel = document.getElementById("s1");
+        var sv = sel.options[sel.selectedIndex].value;
+        weight.push(sv);
+        criteriasinfo.push("Books published");
+      }
+      var cbValue = document.getElementById("cb10").checked;
+      if (cbValue == true) {
+        var sel = document.getElementById("s1");
+        var sv = sel.options[sel.selectedIndex].value;
+        weight.push(sv);
+        criteriasinfo.push("Conference papers");
+      }
+
+    }
+    }
+
+
+    function url_exist(){//se passar a URL existe
+      url = document.getElementById('urlBar').value;
+      var re = /(ftp|http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?/;
+      if (!re.test(url)) 
+      { 
+       return false;
+     }
+     else
+     {
+       return true;
+     }
+    }
+    function validateUrl(value) {
+      return /^(?:(?:(?:https?|ftp):)?\/\/)(?:\S+(?::\S*)?@)?(?:(?!(?:10|127)(?:\.\d{1,3}){3})(?!(?:169\.254|192\.168)(?:\.\d{1,3}){2})(?!172\.(?:1[6-9]|2\d|3[0-1])(?:\.\d{1,3}){2})(?:[1-9]\d?|1\d\d|2[01]\d|22[0-3])(?:\.(?:1?\d{1,2}|2[0-4]\d|25[0-5])){2}(?:\.(?:[1-9]\d?|1\d\d|2[0-4]\d|25[0-4]))|(?:(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)(?:\.(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)*(?:\.(?:[a-z\u00a1-\uffff]{2,})))(?::\d{2,5})?(?:[/?#]\S*)?$/i.test(value);
+    }
+    </script>
+  </div>
+
+  </body>
+  </html>

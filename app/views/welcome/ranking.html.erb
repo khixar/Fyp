@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>AUCS</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="/bootstrap.min.css">
+		<link rel="stylesheet" href="/mycss.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="http://cdn.bootcss.com/animate.css/3.5.1/animate.min.css">
+		<script language="JavaScript" src="/jquery.min.js"></script>
+		<script language="JavaScript" src="/bootstrap.min.js"></script>
+		<script language="JavaScript" src="/myjs.js"></script>
+		<script language="JavaScript" src="/canvasjs.min.js"></script>
+	</head>
+	<body background="/light.jpg" >
+		<br>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-sm-12" >
+					<div id="first-slider" style="border-radius:10px;-moz-box-shadow: 1px 2px 4px rgba(0, 0, 0,0.5);-webkit-box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);box-shadow:5px 5px 4px 4px rgba(0, 0, 0, .5);">
+						<div id="carousel-example-generic" class="carousel slide carousel-fade">
+							<!-- Indicators -->
+							<ol class="carousel-indicators">
+								<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+								<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+								<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+								<li data-target="#carousel-example-generic" data-slide-to="3"></li>
+							</ol>
+							<!-- Wrapper for slides -->
+							<div class="carousel-inner" role="listbox">
+								<!-- Item 1 -->
+								<div class="item active slide1">
+									<div class="row">
+										<div class="container">
+											<div class="col-md-3 text-right">
+												<img style="max-width: 200px; border-radius:10px;"  data-animation="animated zoomInLeft" src="http://s20.postimg.org/pfmmo6qj1/window_domain.png">
+											</div>
+											<div class="col-md-9 text-left">
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- Item 2 -->
+								<div class="item slide2">
+									<div class="row">
+										<div class="container">
+											<div class="col-md-7 text-left">
+											</div>
+											<div class="col-md-5 text-right">
+												<img style="max-width: 200px; border-radius:10px;"  data-animation="animated zoomInLeft" src="http://s20.postimg.org/sp11uneml/rack_server_unlock.png">
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- Item 3 -->
+								<div class="item slide3">
+									<div class="row">
+										<div class="container">
+											<div class="col-md-7 text-left">
+											</div>
+											<div class="col-md-5 text-right">
+												<img style="max-width: 200px; border-radius:10px;"  data-animation="animated zoomInLeft" src="http://s20.postimg.org/eq8xvxeq5/globe_network.png">
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- Item 4 -->
+								<div class="item slide4">
+									<div class="row">
+										<div class="container">
+											<div class="col-md-7 text-left">
+											</div>
+											<div class="col-md-5 text-right">
+												<img style="max-width: 200px; border-radius:10px;"  data-animation="animated zoomInLeft" src="http://s20.postimg.org/9vf8xngel/internet_speed.png">
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- End Item 4 -->
+							</div>
+							<!-- End Wrapper for slides-->
+							<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+							<i class="fa fa-angle-left"></i><span class="sr-only">Previous</span>
+							</a>
+							<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+							<i class="fa fa-angle-right"></i><span class="sr-only">Next</span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="gsearch" style="float:right;width:400px;height:30px;margin-top:10px;margin-bottom:40px;margin-right:20px;" >
+				<gcse:search></gcse:search>
+			</div>
+			<div class="row">
+				<div class="col-sm-3" style="border-radius:10px; margin-left:50px;margin-top:80px;">
+					<div id="sidelist" style="border-radius:10px;-moz-box-shadow: 1px 2px 4px rgba(0, 0, 0,0.5);-webkit-box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);box-shadow:5px 5px 4px 4px rgba(0, 0, 0, .5);">
+						<ul style="list-style-type: none;margin-left:0px;padding-left:0px;">
+							<li>
+								<a href="home.html">
+									<div class="well well-lg" style="margin:0px;">Home<img height=40px width=40px style="float:right;"src="/home.png"></div>
+								</a>
+							</li>
+							<li>
+								<a href="tutorial.html">
+									<div class="well well-lg" style="margin:0px;">Tutorial<img height=40px width=40px style="float:right;"src="/tutorial.png"></div>
+								</a>
+							</li>
+							<li>
+								<a style="color:red">
+									<div class="well well-lg" style="margin:0px;">Calculate Ranking<img height=40px width=40px style="float:right;"src="/ranking.png"></div>
+								</a>
+							</li>
+							<li>
+								<a href="criteria.html">
+									<div class="well well-lg" style="margin:0px;">Criteria Information<img height=40px width=40px style="float:right;"src="/information.png"></div>
+								</a>
+							</li>
+							<li>
+								<a href="about.html">
+									<div class="well well-lg" style="margin:0px;">About us<img height=40px width=40px style="float:right;"src="/aboutus.png"></div>
+								</a>
+							</li>
+							<li>
+								<a href="contact.html">
+									<div class="well well-lg" style="margin:0px;">Contact us<img height=40px width=40px style="float:right;"src="/contactus.png"></div>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-sm-9" style="color:#180000; -moz-box-shadow: 1px 2px 4px rgba(0, 0, 0,0.5);-webkit-box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);box-shadow:5px 5px 4px 4px rgba(0, 0, 0, .5);" >
+					<div id="homeHeading" style="color: orange;font-size:40px;margin-top:20px;" align="center">
+						Enter URLs of universities
+					</div>
+					<br>
+					<div id="hideuni" style="display: inline-block; text-align: center;">
+						<table id="url-table" style="margin-bottom:20px;"align="center">
+							<colgroup>
+								<col width="0%" />
+								<col width="100%" />
+							</colgroup>
+						</table>
+						<div class="input-group" style="margin-bottom:10px;width:80%;height:30px;margin-left:100px;" >
+							<input id="urlBar" type="url" onkeydown = "if (event.keyCode == 13)document.getElementById('check1').click()"  class="form-control" type="text" placeholder="Enter URL here" style="height:45px;margin-top:5px;border-radius:5px">
+							<span class="input-group-btn" style="height:45px;margin-top:5px;border-radius:5px">
+							<button id="check1" class="btn-lg btn btn-primary" style="border-radius:5px; cursor:pointer;margin-left:5px;" type="button" 
+								onclick="addUrlFunc()">Add</button>
+							</span>
+						</div>
+					</div>
+					<div class="criteria section" align="center">
+						<div id="hidecriteria" style="display: none;"align="center" >
+							<table style="width:100%;display:inline-block;-webkit-animation: fadeIn 1s;animation: fadeIn 1s;" id="criteria-table" align="center">
+								<thead style="width:100%;">
+									<tr style="background-color:#5b6472;font-size:20px;color:orange;">
+										<th style="padding:10px 20px 10px 10px;text-decoration:underline">Criteria Name</th>
+										<th style="padding:10px 20px 10px 10px;text-decoration:underline"></th>
+										<th style="padding:10px 20px 10px 177px;text-decoration:underline">Weightage</th>
+									</tr>
+								</thead>
+								<tbody style="overflow-y:auto;height:300px;display:inline-block;">
+									<tr style="background-color:#edf0f2;">
+										<td style="padding:10px 10px 10px 10px;">Total Faculty</td>
+										<td style="padding:10px 10px 10px 10px;display: flex;justify-content: center;">
+											<input type="checkbox" class="checkbox" id="cb1" name="checkbox1" onclick="cb1()" style="cursor: pointer;" />
+										</td>
+										<td style="padding:10px 10px 10px 10px;">
+											<select id="s1" disabled style="cursor: not-allowed;opacity:0.5;">
+												<option value="1">1</option>
+												<option value="2">2</option>
+												<option value="3">3</option>
+												<option value="4">4</option>
+												<option value="5">5</option>
+												<option value="6">6</option>
+												<option value="7">7</option>
+												<option value="8">8</option>
+												<option value="9">9</option>
+												<option value="10">10</option>
+											</select>
+										</td>
+									</tr>
+									<tr style="background-color:#ccdfe8;">
+										<td style="padding:10px 10px 10px 10px">Total PHD's</td>
+										<td style="padding:10px 10px 10px 10px;display: flex;justify-content: center;">
+											<input type="checkbox" class="checkbox" id="cb2" name="checkbox2" onclick="cb2()" style="padding:10px 10px 10px 10px;cursor: pointer;" />
+										</td>
+										<td style="padding:10px 10px 10px 10px">
+											<select id="s2" disabled style="cursor: not-allowed;opacity:0.5;">
+												<option value="1">1</option>
+												<option value="2">2</option>
+												<option value="3">3</option>
+												<option value="4">4</option>
+												<option value="5">5</option>
+												<option value="6">6</option>
+												<option value="7">7</option>
+												<option value="8">8</option>
+												<option value="9">9</option>
+												<option value="10">10</option>
+											</select>
+										</td>
+									</tr>
+									<tr style="background-color:#edf0f2;">
+										<td style="padding:10px 10px 10px 10px">Foreign Phd's</td>
+										<td style="padding:10px 10px 10px 10px;display: flex;justify-content: center;">
+											<input type="checkbox" class="checkbox" id="cb3" name="checkbox3" onclick="cb3()" style="padding:10px 10px 10px 10px;cursor: pointer;" />
+										</td>
+										<td style="padding:10px 10px 10px 10px">
+											<select id="s3" disabled style="cursor: not-allowed;opacity:0.5;">
+												<option value="1">1</option>
+												<option value="2">2</option>
+												<option value="3">3</option>
+												<option value="4">4</option>
+												<option value="5">5</option>
+												<option value="6">6</option>
+												<option value="7">7</option>
+												<option value="8">8</option>
+												<option value="9">9</option>
+												<option value="10">10</option>
+											</select>
+										</td>
+									</tr>
+									<tr style="background-color:#ccdfe8;">
+										<td style="padding:10px 10px 10px 10px">Research Groups</td>
+										<td style="padding:10px 10px 10px 10px;display: flex;justify-content: center;">
+											<input type="checkbox" class="checkbox" id="cb4" name="checkbox4" onclick="cb4()" style="padding:10px 10px 10px 10px;cursor: pointer;" />
+										</td>
+										<td style="padding:10px 10px 10px 10px">
+											<select id="s4" disabled style="cursor: not-allowed;opacity:0.5;">
+												<option value="1">1</option>
+												<option value="2">2</option>
+												<option value="3">3</option>
+												<option value="4">4</option>
+												<option value="5">5</option>
+												<option value="6">6</option>
+												<option value="7">7</option>
+												<option value="8">8</option>
+												<option value="9">9</option>
+												<option value="10">10</option>
+											</select>
+										</td>
+									</tr>
+									<tr style="background-color:#edf0f2;">
+										<td style="padding:10px 10px 10px 10px">Programs offered</td>
+										<td style="padding:10px 10px 10px 10px;display: flex;justify-content: center;">
+											<input type="checkbox" class="checkbox" id="cb5" name="checkbox5" onclick="cb5()" style="padding:10px 10px 10px 10px;cursor: pointer;" />
+										</td>
+										<td style="padding:10px 10px 10px 10px">
+											<select id="s5" disabled style="cursor: not-allowed;opacity:0.5;">
+												<option value="1">1</option>
+												<option value="2">2</option>
+												<option value="3">3</option>
+												<option value="4">4</option>
+												<option value="5">5</option>
+												<option value="6">6</option>
+												<option value="7">7</option>
+												<option value="8">8</option>
+												<option value="9">9</option>
+												<option value="10">10</option>
+											</select>
+										</td>
+									</tr>
+									<tr style="background-color:#ccdfe8;">
+										<td style="padding:10px 10px 10px 10px">Journals</td>
+										<td style="padding:10px 10px 10px 10px;display: flex;justify-content: center;">
+											<input type="checkbox" class="checkbox" id="cb6" name="checkbox6" onclick="cb6()" style="padding:10px 10px 10px 10px;cursor: pointer;" />
+										</td>
+										<td style="padding:10px 10px 10px 10px">
+											<select id="s6" disabled style="cursor: not-allowed;opacity:0.5;">
+												<option value="1">1</option>
+												<option value="2">2</option>
+												<option value="3">3</option>
+												<option value="4">4</option>
+												<option value="5">5</option>
+												<option value="6">6</option>
+												<option value="7">7</option>
+												<option value="8">8</option>
+												<option value="9">9</option>
+												<option value="10">10</option>
+											</select>
+										</td>
+									</tr>
+									<tr style="background-color:#edf0f2;">
+										<td style="padding:10px 10px 10px 10px">Ratio of full-time faculty to total faculty</td>
+										<td style="padding:10px 10px 10px 10px;display: flex;justify-content: center;">
+											<input type="checkbox" class="checkbox" id="cb7" name="checkbox7" onclick="cb7()" style="padding:10px 10px 10px 10px;cursor: pointer;" />
+										</td>
+										<td style="padding:10px 10px 10px 10px">
+											<select id="s7" disabled style="cursor: not-allowed;opacity:0.5;">
+												<option value="1">1</option>
+												<option value="2">2</option>
+												<option value="3">3</option>
+												<option value="4">4</option>
+												<option value="5">5</option>
+												<option value="6">6</option>
+												<option value="7">7</option>
+												<option value="8">8</option>
+												<option value="9">9</option>
+												<option value="10">10</option>
+											</select>
+										</td>
+									</tr>
+									<tr style="background-color:#ccdfe8;">
+										<td style="padding:10px 10px 10px 10px">Ratio of full-time PhD faculty to full-time total faculty</td>
+										<td style="padding:10px 10px 10px 10px;display: flex;justify-content: center;">
+											<input type="checkbox" class="checkbox" id="cb8" name="checkbox8" onclick="cb8()" style="padding:10px 10px 10px 10px;cursor: pointer;" />
+										</td>
+										<td style="padding:10px 10px 10px 10px">
+											<select id="s8" disabled style="cursor: not-allowed;opacity:0.5;">
+												<option value="1">1</option>
+												<option value="2">2</option>
+												<option value="3">3</option>
+												<option value="4">4</option>
+												<option value="5">5</option>
+												<option value="6">6</option>
+												<option value="7">7</option>
+												<option value="8">8</option>
+												<option value="9">9</option>
+												<option value="10">10</option>
+											</select>
+										</td>
+									</tr>
+									<tr style="background-color:#edf0f2;">
+										<td style="padding:10px 10px 10px 10px">Books published</td>
+										<td style="padding:10px 10px 10px 10px;display: flex;justify-content: center;">
+											<input type="checkbox" class="checkbox" id="cb9" name="checkbox9" onclick="cb9()" style="padding:10px 10px 10px 10px;cursor: pointer;" />
+										</td>
+										<td style="padding:10px 10px 10px 10px">
+											<select id="s9" disabled style="cursor: not-allowed;opacity:0.5;">
+												<option value="1">1</option>
+												<option value="2">2</option>
+												<option value="3">3</option>
+												<option value="4">4</option>
+												<option value="5">5</option>
+												<option value="6">6</option>
+												<option value="7">7</option>
+												<option value="8">8</option>
+												<option value="9">9</option>
+												<option value="10">10</option>
+											</select>
+										</td>
+									</tr>
+									<tr style="background-color:#ccdfe8;">
+										<td style="padding:10px 10px 10px 10px">Conference Papers</td>
+										<td style="padding:10px 10px 10px 10px;display: flex;justify-content: center;">
+											<input type="checkbox" class="checkbox" id="cb10" name="checkbox10" onclick="cb10()" style="padding:10px 10px 10px 10px;cursor: pointer;" />
+										</td>
+										<td style="padding:10px 10px 10px 10px">
+											<select id="s10" disabled style="cursor: not-allowed;opacity:0.5;">
+												<option value="1">1</option>
+												<option value="2">2</option>
+												<option value="3">3</option>
+												<option value="4">4</option>
+												<option value="5">5</option>
+												<option value="6">6</option>
+												<option value="7">7</option>
+												<option value="8">8</option>
+												<option value="9">9</option>
+												<option value="10">10</option>
+											</select>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+                        <div id="getuninames" style="display:none;margin-top: 10%;" align="center">
+                            <img src="/bar.gif" align="center"/>
+                        </div>
+                        <div id="hideprogress" style="display:none;margin-top: 10% " align="center" >
+                            <table id="progress-table" align="center">
+                            </table>
+                        </div>
+                        <div id="ranking_table" align="center" >
+                            <table id="table1" align="center" style="width:90%;overflow-x:auto;overflow-y:auto;display:none;"></table>
+                        </div>
+                        <br>
+                        <div id="hideresults" align="center" style="display: none;">
+						<div id="checkboxes" align="center">
+						</div>	
+						<div id="radiobuttons" align="center;margin-top:10px;">
+                                <input id="rb1"type="radio" style="cursor: pointer;" name="Results" value="male" onclick="hideuniscrit()"> Show all results &nbsp;
+                                <input id="rb2"type="radio" style="cursor: pointer;" name="Results" value="female" onclick="displayuniversities()"> Show filtered resutls 
+                        </div>
+                            
+                        </div>
+                        <div align="center" style="margin-top:10px;">
+                            <button id="mybackbutton" style="margin-left: 10px;margin-bottom:10px; cursor: pointer; display: none;" class="btn btn-primary btn-xl" onclick="backbutton()">BACK</button>
+                            <a id="mymainbutton" style="margin-left: 10px;margin-bottom:10px; cursor: pointer;" class="btn btn-primary btn-xl" onclick="mainbutton()">NEXT</a>
+                        </div>
+                    </div>
+				</div>
+				<div id="myModal" class="modal fade" role="dialog">
+				<div class="modal-dialog">
+					<!-- Modal content-->
+					<div class="modal-content">
+						<div class="modal-header">
+							<button onclick="alert("hello")" type="button" class="close" data-dismiss="modal" >&times;</button>
+							<h4 class="modal-title">Graphical Representation</h4>
+						</div>
+						<div class="modal-body">
+							<div id="chartContainer" style="height: 400px;width: 100%">
+							
+							</div>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			</div>
+		</div>
+		<br><br>
+	</body>
+</html>
